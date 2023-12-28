@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Waigera Mwangi PortFolio - Index</title>
+  <title>Waigera Mwangi Portfolio - index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/waigera-favicon.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -41,7 +41,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a>
+      <a class="logo"><img src="{% static 'assets/img/waigera-logo.png' %}" alt="" class="img-fluid"></a>
       <!-- Uncomment below if you prefer to use an text logo -->
       <!-- <h1 class="logo"><a href="index.html">Folio</a></h1> -->
 
@@ -50,24 +50,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link  scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link  scrollto" href="#journal">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
+          <li><a class="nav-link  scrollto" href="#journal">Journaling</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -75,6 +58,15 @@
 
     </div>
   </header><!-- End Header -->
+
+  <style>
+    #hero {
+      background: url("{% static 'assets/img/image2.jpg' %}") repeat scroll center center/cover;
+      background-size: cover; /* This ensures the image covers the entire container */
+      height: 100vh;
+      width: 100%;
+    }    
+  </style>
 
   <!-- ======= Hero Section ======= -->
   <div id="hero" class="home">
@@ -93,6 +85,7 @@
       </div>
     </div>
   </div><!-- End Hero -->
+
 
   <main id="main">
 
@@ -203,8 +196,8 @@
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-card">UI/UX</li>
+              <li data-filter=".filter-web">E-commerce</li>
             </ul>
           </div>
         </div>
@@ -212,65 +205,36 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets/img/portfolio/app1.png' %}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="{% static 'assets/img/portfolio/app1.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets/img/portfolio/commerce1.png' %}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>E-commerce 1</h4>
+              <p>E-commerce</p>
+              <a href="{% static 'assets/img/portfolio/commerce1.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="E-commerce 1"><i class="bx bx-plus"></i></a>
+              {% comment %} <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
+      
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets/img/portfolio/ui1.png' %}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>UI/UX 1</h4>
+              <p>UI/UX</p>
+              <a href="{% static 'assets/img/portfolio/ui1.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UI/UX 1"><i class="bx bx-plus"></i></a>
+              {% comment %} <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
+      
         </div>
 
       </div>
@@ -293,12 +257,12 @@
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="blog-single.html"><img src="{% static 'assets/img/blog-post-1.jpg' %}" class="img-responsive" alt="img"></a>
+                <a href="#"><img src="{% static 'assets/img/image6.jpg' %}" class="img-responsive" alt="img"></a>
 
                 <div class="journal-txt">
 
-                  <h4><a href="blog-single.html">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
-                  <p class="separator">To an English person, it will seem like simplified English
+                  <h4><a href="blog-single.html">Crafting the Digital Symphony: A Glimpse into My Hardware Odyssey</a></h4>
+                  <p class="separator"> With precision and passion, I delve into the heart of technology, weaving a symphony of wires and components -  a moment of collaboration unfolds.
                   </p>
 
                 </div>
@@ -309,12 +273,12 @@
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="blog-single.html"><img src="{% static 'assets/img/blog-post-2.jpg' %}" class="img-responsive" alt="img"></a>
+                <a href="#"><img src="{% static 'assets/img/image4.jpg' %}" class="img-responsive" alt="img"></a>
 
                 <div class="journal-txt">
 
-                  <h4><a href="blog-single.html">WE'RE GONA MAKE DREAMS COMES</a></h4>
-                  <p class="separator">To an English person, it will seem like simplified English
+                  <h4><a href="#">Capturing Moments of Joy with Lifelong Friends</a></h4>
+                  <p class="separator">An enchanting snapshot frozen in time, where laughter echoes and lifelong friendships bloom. 
                   </p>
 
                 </div>
@@ -325,12 +289,12 @@
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="blog-single.html"><img src="{% static 'assets/img/blog-post-3.jpg' %}" class="img-responsive" alt="img"></a>
+                <a href="#"><img src="{% static 'assets/img/image5.jpg' %}" class="img-responsive" alt="img"></a>
 
                 <div class="journal-txt">
 
-                  <h4><a href="blog-single.html">NEW LIFE CIVILIZATIONS TO BOLDLY</a></h4>
-                  <p class="separator">To an English person, it will seem like simplified English
+                  <h4><a href="blog-single.html">Radiant Moments: Embracing the Spotlight in the Tech Venture</a></h4>
+                  <p class="separator">As the hardware breathes beneath the surface, this image tells a personal tale, one where resilience and passion meet the lens.
                   </p>
 
                 </div>
@@ -418,24 +382,19 @@
     <div class="container">
       <div class="socials-media text-center">
 
+
         <ul class="list-unstyled">
           <li><a href="#"><i class="bi bi-facebook"></i></a></li>
           <li><a href="#"><i class="bi bi-twitter"></i></a></li>
           <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-          <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+          <li><a href="#" target="_blank"><i class="bi bi-linkedin"></i></a></li>
         </ul>
 
       </div>
 
-      <p>&copy; Copyrights Waigera. All rights reserved.</p>
+      <p>&copy; Copyrights Waigera-Mwangi. All rights reserved.</p>
 
       <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
-      -->
         Designed by Waigera Mwangi</a>
       </div>
 
